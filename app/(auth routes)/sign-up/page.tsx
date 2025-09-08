@@ -8,12 +8,6 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
 import css from './SignUpPage.module.css';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'SignUp',
-  description: 'SignUp page',
-};
 
 const SignUp = () => {
   const router = useRouter();

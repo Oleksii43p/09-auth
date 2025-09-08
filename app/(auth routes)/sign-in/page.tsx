@@ -8,12 +8,6 @@ import { useAuthStore } from '@/lib/store/authStore';
 import { ApiError } from 'next/dist/server/api-utils';
 
 import css from './SignInPage.module.css';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'SignIn',
-  description: 'SignIn page',
-};
 
 const SignIn = () => {
   const router = useRouter();

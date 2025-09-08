@@ -7,7 +7,7 @@ import { PacmanLoader } from 'react-spinners';
 import { Toaster, toast } from 'react-hot-toast';
 import { keepPreviousData } from '@tanstack/react-query';
 
-import { fetchNotes, NoteResponse } from '@/lib/api';
+import { fetchNotes, NoteResponse } from '@/lib/api/clientApi';
 
 import NoteList from '@/components/NoteList/NoteList';
 import Pagination from '@/components/Pagination/Pagination';

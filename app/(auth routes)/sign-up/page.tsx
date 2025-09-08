@@ -1,13 +1,11 @@
 'use client';
-
 import { Credentials } from '@/types/user';
+import css from './SignUpPage.module.css';
 import { register } from '@/lib/api/clientApi';
-import { useAuthStore } from '@/lib/store/authStore';
-import { ApiError } from 'next/dist/server/api-utils';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-
-import css from './SignUpPage.module.css';
+import { ApiError } from 'next/dist/server/api-utils';
+import { useAuthStore } from '@/lib/store/authStore';
 
 const SignUp = () => {
   const router = useRouter();
@@ -25,7 +23,7 @@ const SignUp = () => {
         setError('Invalid email or password');
       }
     } catch (error) {
-      setError((error as ApiError).message ?? 'Oops... something went wrong');
+      setError((error as ApiError).message ?? 'Oops... some error');
     }
   };
 

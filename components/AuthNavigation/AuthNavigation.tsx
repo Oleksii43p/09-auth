@@ -1,12 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import css from './AuthNavigation.module.css';
 import { logout } from '@/lib/api/clientApi';
 import { useAuthStore } from '@/lib/store/authStore';
 import TagsMenu from '../TagsMenu/TagsMenu';
-import Link from 'next/link';
-
-import css from './AuthNavigation.module.css';
+import { useRouter } from 'next/navigation';
 
 const AuthNavigation = () => {
   const { user, isAuthenticated, clearIsAuthenticated } = useAuthStore();

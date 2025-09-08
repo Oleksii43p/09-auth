@@ -3,7 +3,7 @@ import AuthNavigation from '../AuthNavigation/AuthNavigation';
 
 import css from './Header.module.css';
 
-export default function Header() {
+function Header() {
   return (
     <header className={css.header}>
       <Link href="/" aria-label="Home">
@@ -20,3 +20,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;

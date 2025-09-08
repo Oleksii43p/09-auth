@@ -1,13 +1,12 @@
 'use client';
 
 import { Credentials } from '@/types/user';
+import css from './SignInPage.module.css';
 import { login } from '@/lib/api/clientApi';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useAuthStore } from '@/lib/store/authStore';
 import { ApiError } from 'next/dist/server/api-utils';
-
-import css from './SignInPage.module.css';
 
 const SignIn = () => {
   const router = useRouter();

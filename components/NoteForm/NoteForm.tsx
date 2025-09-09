@@ -1,6 +1,6 @@
 'use client';
 
-import type { CreatedNote, NoteTag } from '../../types/note';
+import type { NoteTag } from '../../types/note';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createNote } from '@/lib/api/clientApi';
 import toast from 'react-hot-toast';

@@ -33,7 +33,11 @@ export default function NoteForm() {
   const handleCancel = () => router.push('/notes/filter/All');
 
   const handleSubmit = (formData: FormData) => {
-    const values = Object.fromEntries(formData) as unknown as CreatedNote;
+    const values: NoteFormValues = {
+      title: formData.get('title') as string,
+      content: formData.get('content') as string,
+      tag: formData.get('tag') as NoteTag,
+    };
     mutate(values);
   };
 
@@ -52,7 +56,7 @@ export default function NoteForm() {
           type="text"
           name="title"
           className={css.input}
-          defaultValue={draft.title}
+          value={draft.title}
           onChange={handleChange}
         />
       </div>
@@ -64,7 +68,7 @@ export default function NoteForm() {
           name="content"
           rows={8}
           className={css.textarea}
-          defaultValue={draft.content}
+          value={draft.content}
           onChange={handleChange}
         />
       </div>
@@ -75,7 +79,7 @@ export default function NoteForm() {
           id="tag"
           name="tag"
           className={css.select}
-          defaultValue={draft.tag}
+          value={draft.tag}
           onChange={handleChange}
         >
           <option value="Todo">Todo</option>

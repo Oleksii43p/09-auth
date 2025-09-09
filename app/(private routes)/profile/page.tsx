@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import { getMe } from '@/lib/api/serverApi';
 import Link from 'next/link';
-import Image from 'next/image';
 
 import css from './ProfilePage.module.css';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Profile',
